@@ -30,8 +30,8 @@ function loginUsuario(){
 }
 
 function loginDocente(){
-    var login = $('#usuario').val();
-    var pass = $('#pass').val();
+    var login = $('#usuarioDocente').val();
+    var pass = $('#passDocente').val();
 
     $.ajax({
         url: './includes/loginDocente.php',

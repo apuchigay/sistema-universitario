@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!empty($_SESSION['active'])){
+        header('Location: admin/');
+    }else if(!empty($_SESSION['activeD'])){
+        header('Location: docente/');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,24 +38,25 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                    <form action="" onsubmit="return validar()">
-                        <label for="usuario">Usuario</label>
-                        <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
-                        <label for="password">Contraseña</label>
-                        <input type="password" name="pass" id="pass" placeholder="Contraseña">
-                        <div id="messageUsuario"></div>
-                        <button id="loginUsuario" type="button">Ingresar</button>
-                    </form>
+                        <form action="" onsubmit="return validar()">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="pass" id="pass" placeholder="Contraseña">
+                            <div id="messageUsuario"></div>
+                            <button id="loginUsuario" type="button">Ingresar</button>
+                        </form>
                     </div>
+
                     <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                    <form action="" onsubmit="return validar()">
-                        <label for="usuario">Usuario</label>
-                        <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
-                        <label for="password">Contraseña</label>
-                        <input type="password" name="pass" id="pass" placeholder="Contraseña">
-                        <div id="messageDocente"></div>
-                        <button id="loginDocente" type="button">Ingresar</button>
-                    </form>
+                        <form action="" onsubmit="return validar()">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" name="usuarioDocente" id="usuarioDocente" placeholder="Nombre de usuario">
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="passDocente" id="passDocente" placeholder="Contraseña">
+                            <div id="messageDocente"></div>
+                            <button id="loginDocente" type="button">Ingresar</button>
+                        </form>
                     </div>
                 </div>
             </div>
