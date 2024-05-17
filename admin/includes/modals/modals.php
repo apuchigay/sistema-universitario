@@ -1,5 +1,4 @@
 <!--MODAL DE USUARIOS-->
-
 <div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
@@ -9,30 +8,31 @@
       </div>
       <div class="modal-body">
         <form id="formUsuario" name="formUsuario">
+          <input type="hidden" name="idusuario" id="idusuario" value="">
           <div class="form-group">
             <label for="control-label">Nombre:</label>
-            <input type="text" class="nombre" id="nombre">
+            <input type="text" class="nombre" id="nombre" name="nombre">
           </div>
           <div class="form-group">
             <label for="control-label">Usuario:</label>
-            <input type="text" class="usuario" id="usuario">
+            <input type="text" class="usuario" id="usuario" name="usuario">
           </div>
           <div class="form-group">
             <label for="control-label">Contraseña:</label>
-            <input type="password" class="clave" id="clave">
+            <input type="password" class="clave" id="clave" name="clave">
           </div>
           <div class="form-group">
             <label for="listRol">Rol</label>
             <select name="listRol" id="listRol" class="form-control">
                 <option value="1">Administrador</option>
-                <option value="1">Asistente</option>
+                <option value="2">Asistente</option>
             </select>
           </div>
           <div class="form-group">
             <label for="listEstado">Estado</label>
             <select name="listEstado" id="listEstado" class="form-control">
                 <option value="1">Activo</option>
-                <option value="1">Inactivo</option>
+                <option value="0">Inactivo</option>
             </select>
           </div>
           <div class="modal-footer">
@@ -41,7 +41,6 @@
           </div>
         </form>
       </div>
-      
     </div>
   </div>
 </div>
